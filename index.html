@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gabriel Osuna | Fullstack & Automatizaciones — Mérida, Venezuela</title>
+  <meta name="description" content="Gabriel Osuna, desarrollador fullstack en Mérida, Venezuela. 12+ sistemas en producción: FONHVIM, GoExpress, GUACHI, ARFESEG. Software a medida y automatizaciones.">
+  <meta property="og:title" content="Gabriel Osuna | Fullstack & Automatizaciones">
+  <meta property="og:description" content="Sistemas en producción para FONHVIM, GoExpress y ARFESEG. Desarrollo de software y automatizaciones desde Mérida, Venezuela.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <canvas id="grid-bg" aria-hidden="true"></canvas>
+  <div class="scanlines" aria-hidden="true"></div>
+
+  <header class="nav" id="nav">
+    <a href="#inicio" class="nav__logo">GO<span>_</span></a>
+    <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav__links" id="navLinks">
+      <a href="#proyectos">Proyectos</a>
+      <a href="#destacados">Destacados</a>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#contacto" class="nav__cta">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+      <div class="hero__badge reveal">DESDE MÉRIDA, VENEZUELA — DISPONIBLE PARA PROYECTOS</div>
+      <h1 class="hero__title reveal">
+        <span class="glitch" data-text="GABRIEL OSUNA">GABRIEL OSUNA</span>
+      </h1>
+      <p class="hero__subtitle reveal">
+        Desarrollador <strong>Fullstack</strong> &amp; <strong>Automatizaciones</strong><br>
+        Construyo sistemas que <em>resuelven problemas reales</em> — y están en producción.
+      </p>
+      <div class="hero__actions reveal">
+        <a href="#proyectos" class="btn btn--primary">Ver sistemas en producción</a>
+        <a href="#contacto" class="btn btn--ghost">Hablemos de tu proyecto</a>
+      </div>
+      <div class="hero__stats reveal">
+        <div class="stat"><span class="stat__num" data-count="12">0</span><span class="stat__label">Sistemas en producción</span></div>
+        <div class="stat"><span class="stat__num" data-count="6">0</span><span class="stat__label">Años construyendo software</span></div>
+        <div class="stat"><span class="stat__num" data-count="50">0</span><span class="stat__label">Certificaciones</span></div>
+        <div class="stat"><span class="stat__num" data-count="4">0</span><span class="stat__label">Países atendidos</span></div>
+      </div>
+      <div class="hero__scroll" aria-hidden="true"><span></span></div>
+    </section>
+
+    <!-- PROYECTOS -->
+    <section class="section" id="proyectos">
+      <div class="section__head reveal">
+        <span class="section__tag">// PORTAFOLIO</span>
+        <h2 class="section__title">Sistemas <span class="accent">en producción</span></h2>
+        <p class="section__desc">Software real, con usuarios reales. Cada proyecto está desplegado y operando.</p>
+      </div>
+
+      <div class="filters reveal" role="tablist" aria-label="Filtrar proyectos">
+        <button class="filter is-active" data-filter="all">Todos</button>
+        <button class="filter" data-filter="saas">SaaS</button>
+        <button class="filter" data-filter="ecommerce">E-commerce</button>
+        <button class="filter" data-filter="gub">Gubernamental</button>
+        <button class="filter" data-filter="movilidad">Movilidad</button>
+        <button class="filter" data-filter="auto">Automatización</button>
+      </div>
+
+      <div class="grid" id="projectGrid">
+        <!-- cards inyectadas por js/main.js -->
+      </div>
+    </section>
+
+    <!-- DESTACADOS -->
+    <section class="section section--alt" id="destacados">
+      <div class="section__head reveal">
+        <span class="section__tag">// CASE STUDIES</span>
+        <h2 class="section__title">Los más <span class="accent">destacados</span></h2>
+      </div>
+
+      <article class="case reveal">
+        <div class="case__media">
+          <img src="screenshots/fonhvim-desktop.jpeg" alt="Sistema FONHVIM - portal de ayuda social" loading="lazy">
+          <div class="case__scan" aria-hidden="true"></div>
+        </div>
+        <div class="case__body">
+          <span class="case__cat">Gubernamental · En producción</span>
+          <h3>FONHVIM — Portal de ayuda social</h3>
+          <p>Ecosistema completo para la gestión de solicitudes de ayuda social: portal ciudadano, app móvil interna e API inter-institucional. Angular + NestJS + PostgreSQL + Expo, desplegado en Dokploy con dominios propios (<code>fonhvim.com</code>, <code>interno.fonhvim.com</code>).</p>
+          <ul class="case__tags"><li>Angular</li><li>NestJS</li><li>PostgreSQL</li><li>Expo</li><li>Dokploy</li></ul>
+          <a class="case__link" href="https://fonhvim.com" target="_blank" rel="noopener">Visitar sitio →</a>
+        </div>
+      </article>
+
+      <article class="case case--reverse reveal">
+        <div class="case__media">
+          <img src="screenshots/goexpress-desktop.jpeg" alt="GoExpress - ecosistema de delivery en Mérida" loading="lazy">
+          <div class="case__scan" aria-hidden="true"></div>
+        </div>
+        <div class="case__body">
+          <span class="case__cat">Movilidad · En producción</span>
+          <h3>GoExpress — Ecosistema de delivery</h3>
+          <p>Plataforma de mensajería y viajes para Mérida: apps de motorizado y pasajero en tiempo real (GPS + Socket.io), panel administrativo, landing marketing y store de APKs. NestJS + Angular + Next.js + Expo + MySQL.</p>
+          <ul class="case__tags"><li>NestJS</li><li>Socket.io</li><li>Angular</li><li>Next.js</li><li>Expo</li></ul>
+          <a class="case__link" href="https://goexpress.com.ve" target="_blank" rel="noopener">Visitar sitio →</a>
+        </div>
+      </article>
+
+      <article class="case reveal">
+        <div class="case__media">
+          <img src="screenshots/guachi-desktop.jpeg" alt="GUACHI - automatización de compra de divisas BDV" loading="lazy">
+          <div class="case__scan" aria-hidden="true"></div>
+        </div>
+        <div class="case__body">
+          <span class="case__cat">Automatización · SaaS propio</span>
+          <h3>GUACHI — Automatización de divisas BDV</h3>
+          <p>Producto propio: ejecutable que automatiza la compra de divisas en BDVEnláz@, con panel web de suscripciones (USD), verificación OTP y sistema de versiones. Angular + NestJS + Deno/Playwright, con suite e2e de 100+ tests. <strong>Facturando desde noviembre 2026.</strong></p>
+          <ul class="case__tags"><li>Angular</li><li>NestJS</li><li>Deno</li><li>Playwright</li><li>Remotion</li></ul>
+          <a class="case__link" href="https://guachi.goexpress.com.ve" target="_blank" rel="noopener">Visitar sitio →</a>
+        </div>
+      </article>
+    </section>
+
+    <!-- SOBRE MÍ -->
+    <section class="section" id="sobre-mi">
+      <div class="section__head reveal">
+        <span class="section__tag">// PERFIL</span>
+        <h2 class="section__title">Sobre <span class="accent">mí</span></h2>
+      </div>
+
+      <div class="about">
+        <div class="about__text reveal">
+          <p class="lead">Soy <strong>Gabriel Osuna</strong>, desarrollador fullstack con base en Mérida, Venezuela. Durante los últimos años he construido sistemas completos —portales, e-commerce, apps móviles y automatizaciones— que hoy operan en producción para organizaciones como <strong>FONHVIM</strong>, <strong>GoExpress</strong> y <strong>ARFESEG</strong>.</p>
+          <p>Vengo del mundo de la <strong>Protección Civil</strong> (exfuncionario en Mérida), lo que me dio una obsesión por el software que realmente funciona bajo presión: datos confiables, tiempos reales, cero improvisación. Hoy aplico esa misma disciplina a cada proyecto.</p>
+          <p>Mi enfoque es simple: <strong>entregar sistemas listos para producción</strong>, no demos. Fullstack con Node/NestJS + Angular/React, bases de datos PostgreSQL/MySQL, apps Expo y automatizaciones con Playwright/IA.</p>
+          <div class="about__actions">
+            <a class="btn btn--primary" href="mailto:osunapc@gmail.com">osunapc@gmail.com</a>
+            <a class="btn btn--ghost" href="https://github.com/osunapc" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+
+        <div class="about__side reveal">
+          <div class="panel">
+            <h4 class="panel__title">// STACK</h4>
+            <div class="chips">
+              <span>NestJS</span><span>Node.js</span><span>Angular</span><span>React</span>
+              <span>TypeScript</span><span>PostgreSQL</span><span>MySQL</span><span>Expo / React Native</span>
+              <span>Next.js</span><span>Astro</span><span>Socket.io</span><span>Docker</span>
+              <span>Playwright</span><span>Automatización con IA</span><span>Dokploy</span><span>Git</span>
+            </div>
+          </div>
+          <div class="panel">
+            <h4 class="panel__title">// EXPERIENCIA</h4>
+            <ul class="timeline">
+              <li><strong>FONHVIM</strong> — Desarrollador Fullstack (2025 – Actual)</li>
+              <li><strong>ARFESEG / GoExpress</strong> — Sistemas y landings (2025)</li>
+              <li><strong>Protección Civil Mérida</strong> — Exfuncionario</li>
+              <li><strong>Blacmedia</strong> — Puerto Rico (2022 – 2024)</li>
+              <li><strong>Freelance</strong> — Desde 2014</li>
+            </ul>
+          </div>
+          <div class="panel">
+            <h4 class="panel__title">// FORMACIÓN</h4>
+            <ul class="timeline">
+              <li><strong>UPTM</strong> — Ing. en Desarrollo Endógeno (Software para Gestión de Riesgo)</li>
+              <li><strong>+50 certificaciones</strong> — IA, Python, Ciberseguridad, Photoshop, SEO</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="section section--cta" id="contacto">
+      <div class="cta reveal">
+        <span class="section__tag">// SIGUIENTE PASO</span>
+        <h2 class="section__title">¿Necesitas un sistema<br>que <span class="accent">sí funcione en producción</span>?</h2>
+        <p class="section__desc">Desarrollo fullstack, apps móviles y automatizaciones. Mérida, Venezuela — o remoto para cualquier parte del mundo.</p>
+        <div class="cta__actions">
+          <a class="btn btn--primary btn--lg" href="mailto:osunapc@gmail.com">Escríbeme</a>
+          <a class="btn btn--ghost btn--lg" href="https://www.linkedin.com/in/gabriel-osuna/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+        <div class="cta__meta">
+          <a href="mailto:osunapc@gmail.com">osunapc@gmail.com</a>
+          <span>·</span>
+          <a href="tel:+584147353142">+58 414-7353142</a>
+          <span>·</span>
+          <a href="https://github.com/osunapc" target="_blank" rel="noopener">github.com/osunapc</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Gabriel Leonardo Espitia Osuna — Mérida, Venezuela. Construido a mano con HTML, CSS y JS.</p>
+  </footer>
+
+  <!-- MODAL -->
+  <div class="modal" id="modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__panel">
+      <button class="modal__close" data-close aria-label="Cerrar">✕</button>
+      <div class="modal__media"><img id="modalImg" src="" alt=""></div>
+      <div class="modal__body">
+        <span class="modal__cat" id="modalCat"></span>
+        <h3 id="modalTitle"></h3>
+        <p id="modalDesc"></p>
+        <ul class="case__tags" id="modalTags"></ul>
+        <div class="modal__links" id="modalLinks"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
